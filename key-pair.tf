@@ -8,9 +8,10 @@ resource "tls_private_key" "rsa" {
 resource "aws_key_pair" "my_instance_key" {
   key_name   = "instance-public-key"
   public_key = tls_private_key.rsa.public_key_openssh
-}
+
 
 # storing the key
  provisioner "local-exec" {
-    command = "echo '${tls_private_key.pk.private_key_openssh}' > ./instance-private-key.pem"
+    command = "echo '${tls_private_key.rsa.public_key_openssh}' > ./instance-private-key.pem"
   }
+}
