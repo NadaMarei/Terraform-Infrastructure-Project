@@ -6,5 +6,6 @@ terraform {
     key    = "terrafrom.tfstate"
     region = "us-east-1"
     dynamodb_table = "NadaMarey-01"
+    partition_key = "LockID"
   }
 }
