@@ -7,7 +7,7 @@ resource "tls_private_key" "rsa" {
 # instance publlic key 
 resource "aws_key_pair" "my_instance_key" {
   key_name   = "instance-public-key"
-  public_key = tls_private_key.rsa.public_key_openssh 
+  public_key = tls_private_key.rsa.public_key_openssh
 }
 
 # storing the key
