@@ -8,6 +8,10 @@ variable "vpc_name" {
   type = string
 }
 
+variable "igw_name" {
+  type = string
+}
+
 variable "public_subnet_1_cider" {
   type = string
   description = ""

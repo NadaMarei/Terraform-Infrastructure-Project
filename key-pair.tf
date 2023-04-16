@@ -11,8 +11,6 @@ resource "aws_key_pair" "my_instance_key" {
 }
 
 # storing the key
-resource "local_file" "my_instance_key" {
-  content  = tls_private_key.rsa.private_key_pem
-  filename = "instance-private-key.pem"
-}
-
+ provisioner "local-exec" {
+    command = "echo '${tls_private_key.pk.private_key_openssh}' > ./instance-private-key.pem"
+  }

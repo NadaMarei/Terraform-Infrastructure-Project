@@ -9,13 +9,13 @@ resource "aws_security_group" "app_sg" {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_blocks = [aws_vpc.my_vpc.cidr_block]
+    cidr_blocks = [module.network.vpc_cidr]
   }
 
   ingress {
     from_port = 3000
     to_port = 3000
     protocol = "tcp"
-    cidr_blocks = [aws_vpc.my_vpc.cidr_block]
+    cidr_blocks = [module.network.vpc_cidr]
   }
 }
