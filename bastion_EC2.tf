@@ -11,7 +11,7 @@ resource "aws_instance" "bastion-instence" {
               #!/bin/bash
               yum update -y
               yum install -y httpd
-              echo "Hello, world!" > /var/www/html/index.html
+              echo "Hello, Nada!" > /var/www/html/index.html
               systemctl enable httpd
               systemctl start httpd
               EOF
