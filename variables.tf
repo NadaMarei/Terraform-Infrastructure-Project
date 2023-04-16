@@ -13,22 +13,18 @@ variable "IGW_NAME" {
 
 variable "PUBLIC_SUBNET_1_CIDR" {
   type = string
-  default = "10.0.1.0/24"
 }
 
 variable "PUBLIC_SUBNET_2_CIDR" {
   type = string
-  default = "10.0.2.0/24"
 }
 
 variable "PRIVATE_SUBNET_1_CIDR" {
   type = string
-  default = "10.0.3.0/24"
 }
 
 variable "PRIVATE_SUBNET_2_CIDR" {
   type = string
-  default = "10.0.4.0/24"
 }
 
 variable "AZ_1" {
