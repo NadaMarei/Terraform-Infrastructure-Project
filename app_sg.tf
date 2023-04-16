@@ -1,7 +1,7 @@
 # create a security group that allows SSH and port 3000 from VPC CIDR only:
 
 resource "aws_security_group" "app_sg" {
-  vpc_id = aws_vpc.my_vpc.id
+  vpc_id = module.network.vpc_id
   name_prefix = "app-sg-"
   description = "Security group for app instance"
 

@@ -3,7 +3,7 @@
 resource "aws_instance" "bastion-instence" {
   ami                    = var.AMI_ID
   instance_type          = var.INSTANCE_TYPE
-  subnet_id              = aws_subnet.public_subnet_1.id
+  subnet_id              = module.network.pub_sub_1_id
   vpc_security_group_ids = [aws_security_group.bastion_sg.id]
   key_name               = aws_key_pair.my_instance_key.key_name
 
