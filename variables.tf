@@ -46,3 +46,44 @@ variable "AMI_ID" {
 variable "INSTANCE_TYPE" {
   type = string
 }
+variable "EC2_COUNT" {
+  type = number
+  description = ""
+}
+
+variable "DB_NAME" {
+    type = string
+    description = ""
+}
+variable "DB_ENGINE" {
+    type = string
+    description = ""
+}
+variable "DB_INSTANCE_CLASS" {
+    type = string
+    description = ""
+}
+variable "DB_ENGINE_VERSION" {
+    type = string
+    description = ""
+}
+
+variable "SECRET_ARN" {
+    type = string
+    description = ""
+}
+
+variable "CHACHE_NODE_TYPE" {
+    type = string
+    description = ""
+}
+
+variable "CHACHE_NODE_NUM" {
+    type = number
+    description = ""
+}
+
+variable "CHACHE_ENGINE_VERSION" {
+    type = string
+    description = ""
+}

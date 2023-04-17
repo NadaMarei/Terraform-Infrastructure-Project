@@ -4,7 +4,7 @@ terraform {
   backend "s3" {
     bucket = "nada-terraform-state-bucket"
     key    = "terrafrom.tfstate"
-    region = "us-east-1"
+    region = var.REGION
     dynamodb_table = "NadaMarey-01"
     partition_key = "LockID"
   }

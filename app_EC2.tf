@@ -1,6 +1,7 @@
 # create app EC2 instance 
 
 resource "aws_instance" "app-instance" {
+  count                  = var.EC2_COUNT
   ami                    = var.AMI_ID
   instance_type          = var.INSTANCE_TYPE
   subnet_id              = module.network.priv_sub_1_id
