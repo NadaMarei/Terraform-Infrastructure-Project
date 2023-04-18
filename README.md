@@ -50,7 +50,7 @@ The following variables can be set in the `dev.tfvars` and `prod.tfvars` files: 
 `backend_region` The region of the S3 bucket and DynamoDB table. </br>
 `backend_dynamodb_table_name` The name of the DynamoDB table for storing the Terraform state file. </br>
 
-Modules
+## Modules </br>
 The project includes a network module that creates the VPC, internet gateway, route tables, and subnets. To use this module, add the following code to your main Terraform file: </br>
 ```
 module "network" {
