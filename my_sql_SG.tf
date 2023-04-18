@@ -4,7 +4,7 @@ resource "aws_security_group" "mysql-sec" {
   vpc_id      = module.network.vpc_id
 
   ingress {
-    description      = "ssh from inside"
+    description      = "Allows SSH"
     from_port        = 3306
     to_port          = 3306
     protocol         = "tcp"

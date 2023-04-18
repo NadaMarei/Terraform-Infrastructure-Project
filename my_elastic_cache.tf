@@ -1,7 +1,7 @@
 resource "aws_elasticache_subnet_group" "chach_subnets" {
   name       = "tf-test-cache-subnet"
   subnet_ids = [module.network.priv_sub_1_id, module.network.priv_sub_2_id]
-}
+} 
 
 
 resource "aws_elasticache_cluster" "elastic" {

@@ -4,7 +4,7 @@ resource "aws_security_group" "elastic-sec" {
   vpc_id      = module.network.vpc_id
 
   ingress {
-    description      = "ssh from inside"
+    description      = "Allows SSH"
     from_port        = 6379
     to_port          = 6379
     protocol         = "tcp"
